@@ -1,3 +1,3 @@
 # Echo-Chamber
 hi
-Hello, this is Sai
+hello
