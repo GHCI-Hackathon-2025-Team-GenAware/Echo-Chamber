@@ -1,6 +1,6 @@
 # test_ml.py
 
-from analyzer import analyze_article
+from ml.analyzer import analyze_article
 
 sample_text = """
 Trump blasts former Starbucks CEO Howard Schultz, says ex-Starbucks CEO doesn't have the guts to run in 2020.
