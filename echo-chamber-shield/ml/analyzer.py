@@ -1,9 +1,10 @@
 # analyzer.py
 
+
 import json
 import pandas as pd
-from utils import clean_text
-from scoring import (
+from ml.utils import clean_text
+from ml.scoring import (
     bias_to_polarity,
     compute_variance,
     build_network,
@@ -11,6 +12,7 @@ from scoring import (
     compute_mixing,
     final_echo_score
 )
+
 
 DATA_PATH = "ml/data/released_data.json"
 
