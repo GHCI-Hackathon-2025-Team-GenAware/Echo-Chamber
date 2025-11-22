@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { mockHistoryData, getMockMentorResponse } from './mockData';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 // Create axios instance with default config
 const api = axios.create({
@@ -23,6 +23,8 @@ api.interceptors.request.use(
   },
   (error) => Promise.reject(error)
 );
+
+
 
 // Response interceptor for error handling
 api.interceptors.response.use(
@@ -55,6 +57,19 @@ export const apiService = {
       return { data: mockHistoryData };
     }
   },
+  analyzeText: async (user_id, text, offlineMode = false) => {
+  try {
+    const response = await api.post("/analyze", {
+      user_id,
+      text,
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Analyze API failed:", error);
+    throw error;
+  }
+},
+
 
   // Post message to mentor bot
   postMentorMessage: async (message, language = 'en', offlineMode = false) => {
