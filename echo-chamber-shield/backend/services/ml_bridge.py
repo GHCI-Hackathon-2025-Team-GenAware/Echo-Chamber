@@ -1,19 +1,14 @@
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 from ml.analyzer import analyze_article
 
 def analyze_text(text: str):
-    # Run Sudhi's ML function
     result = analyze_article(text)
 
-    # Convert Sudhi's format → Backend API format
     return {
-        "bias": {
-            "label": result["bias_label"],
-            "confidence": 1.0
-        },
-        "sentiment": {
-            "label": "N/A",
-            "score": 0.0
-        },
+        "bias": {"label": result["bias_label"], "confidence": 1.0},
+        "sentiment": {"label": "N/A", "score": 0.0},
         "polarity": result["polarity"],
         "variance": result["variance"],
         "ei_index": result["ei_index"],
@@ -24,5 +19,5 @@ def analyze_text(text: str):
             "Moderate Echo Chamber" if result["echo_score"] > 40 else
             "Low Echo Chamber"
         ),
-        "explanations": result["explanations"]
+        "explanations": result["explanations"],
     }

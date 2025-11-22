@@ -1,12 +1,13 @@
 from fastapi import APIRouter
-from backend.schemas.analyze_schema import AnalyzeRequest
-from backend.services.ml_bridge import analyze_text
-from backend.services.storage import save_history
+from ..schemas.analyze_schema import AnalyzeRequest
+from ..services.storage import save_history
+from ..services.ml_bridge import analyze_text
+
 
 
 router = APIRouter()
 
-@router.post("/")
+@router.post("/analyze")
 def analyze(req: AnalyzeRequest):
     result = analyze_text(req.text)
 

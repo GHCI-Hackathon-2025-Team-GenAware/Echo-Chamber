@@ -1,5 +1,7 @@
 from fastapi import APIRouter
-from backend.services.storage import get_history
+
+from ..services.storage import get_history
+
 
 
 router = APIRouter()
