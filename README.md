@@ -1,4 +1,10 @@
 # 🚀 EchoChamberShield  
+## Project Documents
+
+- 📄 **Project Problem Statement PDF:** [Click here to view](https://drive.google.com/file/d/1VBf3gA0YPe-Evs_f0nGfG3JxOExKKRxQ/view?usp=sharing)
+- 📝 **Project Explanation Report (DOCX):** [Click here to open](https://docs.google.com/document/d/1P_f89KLe-TSK2NklZFOoHl-kQRS4JAQN/edit?usp=sharing)
+-  📄 **Project Explanation Video:** [Click here to view](https://drive.google.com/file/d/1nDemMe05xbWied2MMLohewcxS-RE5dQu/view?usp=sharing)
+
 ### *A Full-Stack AI System to Detect, Explain & Reduce Online Echo Chambers*
 
 EchoChamberShield is a **full-stack machine learning system** designed to help users understand how polarized or biased their text/content is. It computes multiple ML-driven metrics — **polarity, variance, EI Index, mixing patterns, bias**, and a **final Echo Chamber Score** — and provides **clear explanations + personalized mentor suggestions**.
@@ -286,3 +292,4 @@ EchoChamberShield is a powerful prototype that combines:
 It empowers users to understand ideological bias, reduces exposure to polarization, and promotes digital literacy.
 
 This project is a meaningful step toward **healthier information ecosystems and responsible media consumption**.
+
